@@ -1,6 +1,7 @@
-first djano project
-step to create
-1. pip3 install pipenv
-2. pipenv install django
-3. pipenv shell
-4. django-admin startproject storefront .
+## First django project
+# step to create
+
+- pip3 install pipenv
+- pipenv install django
+- pipenv shell
+- django-admin startproject storefront .
