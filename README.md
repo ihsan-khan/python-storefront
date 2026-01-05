@@ -5,3 +5,4 @@
 - pipenv install django
 - pipenv shell
 - django-admin startproject storefront .
+- python manage.py runserver
