@@ -7,3 +7,4 @@
 - django-admin startproject storefront .
 - python manage.py runserver
 - python manage.py stratapp playground
+- pipenv install django-debug-toolbar
