@@ -50,3 +50,15 @@ class Order(models.Model):
 
     def __str__(self):
         return f"Order {self.id} - {self.get_status_display()}"
+    
+# address model
+class Address(models.Model):
+    customer = models.OneToOneField(Customer, on_delete=models.CASCADE, primary_key=True)
+    street = models.CharField(max_length=255)
+    city = models.CharField(max_length=100)
+    state = models.CharField(max_length=100)
+    postal_code = models.CharField(max_length=20)
+    country = models.CharField(max_length=100)
+
+    def __str__(self):
+        return f"{self.street}, {self.city}, {self.country}"
