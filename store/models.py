@@ -33,3 +33,20 @@ class Customer(models.Model):
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
+    
+# order model
+class Order(models.Model):
+    STATUS_PENDING = 'P'
+    STATUS_COMPLETED = 'C'
+    STATUS_FAILED = 'F'
+    STATUS_CHOICES = [
+        (STATUS_PENDING, 'Pending'),
+        (STATUS_COMPLETED, 'Completed'),
+        (STATUS_FAILED, 'Failed'),
+    ]
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    placed_at = models.DateTimeField(auto_now_add=True)
+    status = models.CharField(max_length=1, choices=STATUS_CHOICES, default=STATUS_PENDING)
+
+    def __str__(self):
+        return f"Order {self.id} - {self.get_status_display()}"
