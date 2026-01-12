@@ -72,3 +72,11 @@ class OrderItem(models.Model):
 
     def __str__(self):
         return f"{self.quantity} x {self.product.title} @ {self.unit_price}"
+    
+# collection model
+class Collection(models.Model):
+    title = models.CharField(max_length=255)
+    featured_product = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True, blank=True, related_name='featured_in_collections')
+
+    def __str__(self):
+        return self.title
