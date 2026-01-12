@@ -80,3 +80,19 @@ class Collection(models.Model):
 
     def __str__(self):
         return self.title
+    
+# cart model
+class Cart(models.Model):
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Cart {self.id}"
+    
+# cart item model
+class CartItem(models.Model):
+    cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField()
+
+    def __str__(self):
+        return f"{self.quantity} x {self.product.title} in Cart {self.cart.id}"
