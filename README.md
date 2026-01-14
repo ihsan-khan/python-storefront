@@ -11,3 +11,4 @@
 - python manage.py makemigrations
 - python manage.py migrate
 - python manage.py sqlmigrate store 0003
+- python manage.py migrate store 0003
