@@ -10,3 +10,4 @@
 - pipenv install django-debug-toolbar
 - python manage.py makemigrations
 - python manage.py migrate
+- python manage.py sqlmigrate store 0003
