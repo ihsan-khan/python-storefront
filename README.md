@@ -9,3 +9,4 @@
 - python manage.py stratapp playground
 - pipenv install django-debug-toolbar
 - python manage.py makemigrations
+- python manage.py migrate
