@@ -1,6 +1,4 @@
 ## First django project
-# step to create
-
 - pip3 install pipenv
 - pipenv install django
 - pipenv shell
@@ -8,3 +6,7 @@
 - python manage.py runserver
 - python manage.py stratapp playground
 - pipenv install django-debug-toolbar
+- python manage.py makemigrations
+- python manage.py migrate
+- python manage.py sqlmigrate store 0003
+- python manage.py migrate store 0003
